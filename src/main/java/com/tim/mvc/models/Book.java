@@ -29,7 +29,7 @@ public class Book {
 	@Size(min = 3, max= 40)
 	private String language;
 	@Min(100)
-	private Integer numberOfPages;
+	private String numberOfPages;
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyy-MM-dd")
 	private Date createdAt;
@@ -41,7 +41,7 @@ public class Book {
 	public Book() {
 		
 	}
-	public Book(String title, String desc, String lang, int pages) {
+	public Book(String title, String desc, String lang, String pages) {
 		this.title = title;
 		this.description = desc;
 		this.language = lang;
@@ -99,14 +99,14 @@ public class Book {
 
 
 
-	public Integer getNumberOfPages() {
+	public String getNumberOfPages() {
 		return numberOfPages;
 	}
 
 
 
-	public void setNumberOfPages(Integer numberOfPages) {
-		this.numberOfPages = numberOfPages;
+	public void setNumberOfPages(String numOfPages) {
+		this.numberOfPages = numOfPages;
 	}
 
 
